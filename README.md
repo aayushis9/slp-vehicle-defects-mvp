@@ -193,7 +193,7 @@ data/FLAT_CMPL.txt
 
 ```bash
 python scripts/build_geo_state_counts.py
-
+```
 You should see:
 
 Built geo index at: data/geo_state_counts.sqlite
@@ -202,7 +202,7 @@ Built geo index at: data/geo_state_counts.sqlite
 
 ```bash
 streamlit run app/app.py
-
+```
 ## Recommended Usage Flow
 
 1. Use VIN when available (best accuracy)
