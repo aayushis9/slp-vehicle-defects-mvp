@@ -496,7 +496,7 @@ def main():
 
     # ---------------- Geography ----------------
     with tabs[3]:
-        st.subheader("Where are complaints coming from:")
+        st.subheader("Where are complaints coming from")
 
         # 1) Try live complaints feed (often missing state fields)
         df_state = complaints_by_state(complaints_payload)
