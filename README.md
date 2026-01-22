@@ -110,10 +110,10 @@ Search Engine (search.py)
         │
         ▼
 Offline Geo Index (geo_state_counts.sqlite)
-
+```
 
 ## 📁 Project Structure
-
+```text
 
 slp-vehicle-defects-mvp/
 │
