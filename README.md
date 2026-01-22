@@ -90,24 +90,25 @@ All data comes from official U.S. government sources:
 
 ## 🧠 Architecture Overview
 
+```text
 Streamlit UI (app.py)
-      |
-      ↓
-NHTSAClient (nhtsa_client.py)
-      |
-      ↓
-NHTSA APIs (VIN / Recalls / Complaints)
-      |
-      ↓
-SQLite Cache (storage.py)
-      |
-      ↓
+        │
+        ▼
+NHTSA Client (nhtsa_client.py)
+        │
+        ▼
+NHTSA APIs (VIN Decode / Recalls / Complaints)
+        │
+        ▼
+SQLite Cache Layer (storage.py)
+        │
+        ▼
 Analytics Engine (analytics.py)
-      |
-      ↓
+        │
+        ▼
 Search Engine (search.py)
-      |
-      ↓
+        │
+        ▼
 Offline Geo Index (geo_state_counts.sqlite)
 
 
@@ -135,9 +136,10 @@ slp-vehicle-defects-mvp/
 ├── requirements.txt
 └── README.md
 
+---
 
 
-## ⚙️ Installation & Setup
+### ⚙️ Installation & Setup
 
 ### 1. Create Virtual Environment
 
