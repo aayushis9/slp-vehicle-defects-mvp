@@ -397,12 +397,12 @@ def main():
             )
 
         st.subheader("Quick Intake Answers")
-        st.write(f"**Known issue?** {'Yes (complaints exist)' if complaints_count > 5 else 'Limited evidence'}")
-        st.write(f"**Recall?** {'Yes' if recalls_count > 0 else 'No recall found'}")
-        st.write(f"**Pattern?** {'Pattern detected' if complaints_count >= 10 else 'Possibly isolated'}")
+        st.write(f"**Known issue :** {'Yes (complaints exist)' if complaints_count > 5 else 'Limited evidence'}")
+        st.write(f"**Recall :** {'Yes' if recalls_count > 0 else 'No recall found'}")
+        st.write(f"**Pattern :** {'Pattern detected' if complaints_count >= 10 else 'Possibly isolated'}")
 
         severe_any = severity.crashes or severity.fires or severity.injuries or severity.deaths
-        st.write(f"**Severity indicators?** {'Yes' if severe_any else 'None reported'}")
+        st.write(f"**Severity indicators :** {'Yes' if severe_any else 'None reported'}")
 
         # Geographic concentration check (live state OR ODI fallback)
         df_state_live = complaints_by_state(complaints_payload)
@@ -415,11 +415,11 @@ def main():
             total = int(df_state_geo["count"].sum()) if "count" in df_state_geo.columns else 0
             peak = int(df_state_geo["count"].max()) if "count" in df_state_geo.columns else 0
             if total > 0 and peak > int(total * 0.30):
-                st.write("**Geographic concentration?** Possible regional clustering")
+                st.write("**Geographic concentration:** Possible regional clustering")
             else:
-                st.write("**Geographic concentration?** Appears broad / nationwide")
+                st.write("**Geographic concentration:** Appears broad / nationwide")
         else:
-            st.write("**Geographic concentration?** Unknown (no state fields available for this query)")
+            st.write("**Geographic concentration:** Unknown (no state fields available for this query)")
 
         st.subheader("Recalls")
         if recalls_count == 0:
@@ -496,7 +496,7 @@ def main():
 
     # ---------------- Geography ----------------
     with tabs[3]:
-        st.subheader("Where are complaints coming from?")
+        st.subheader("Where are complaints coming from:")
 
         # 1) Try live complaints feed (often missing state fields)
         df_state = complaints_by_state(complaints_payload)
