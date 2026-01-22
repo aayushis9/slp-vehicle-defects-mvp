@@ -136,10 +136,9 @@ slp-vehicle-defects-mvp/
 ├── requirements.txt
 └── README.md
 
----
+```
 
-
-### ⚙️ Installation & Setup
+### Installation & Setup
 
 ### 1. Create Virtual Environment
 
